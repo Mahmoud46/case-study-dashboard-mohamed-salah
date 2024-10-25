@@ -1,0 +1,1379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #121212;
+  color: #fff;
+  padding: 0 10%;
+}
+body .home_container {
+  width: 92%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+body .home_container .img_cont {
+  width: 500px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+body .home_container .img_cont img {
+  height: 100%;
+}
+body .home_container .img_cont::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(45deg, #c70f2e, #121212);
+  border-radius: 50%;
+  z-index: -2;
+  bottom: -50px;
+  filter: blur(15px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .home_container .img_cont::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  bottom: 0;
+  background: linear-gradient(rgba(18, 18, 18, 0), #121212);
+}
+body .home_container .img_cont .titles_dashboard_btns {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+body .home_container .img_cont .titles_dashboard_btns p:first-child {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 500;
+  letter-spacing: 20px;
+  text-align: center;
+}
+body .home_container .img_cont .titles_dashboard_btns p:nth-child(2) {
+  font-size: 100px;
+  line-height: 100px;
+  letter-spacing: 50px;
+  text-align: center;
+}
+body .home_container .img_cont .titles_dashboard_btns p:last-child {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+body .home_container .img_cont .titles_dashboard_btns button {
+  position: relative;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: none;
+  overflow: hidden;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out all;
+}
+body .home_container .img_cont .titles_dashboard_btns button a {
+  color: #b9b8b8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: inherit;
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .home_container .img_cont .titles_dashboard_btns button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: inherit;
+  background: #383838;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+body .home_container .img_cont .titles_dashboard_btns button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: inherit;
+  background: linear-gradient(90deg, #c70f2e, #121212);
+  top: 0;
+  left: -100%;
+  z-index: 1;
+}
+body .home_container .img_cont .titles_dashboard_btns button:hover::before {
+  right: -100%;
+}
+body .home_container .img_cont .titles_dashboard_btns button:hover::after {
+  left: 0;
+}
+body .home_container .img_cont .titles_dashboard_btns button:hover a {
+  color: #fff;
+}
+body .home_container .img_cont .titles_dashboard_btns .comp_icons {
+  display: flex;
+  gap: 20px;
+}
+body .home_container .img_cont .titles_dashboard_btns .comp_icons img {
+  height: 40px;
+  opacity: 0.7;
+}
+body .main_container {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+body .main_container .image_container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  overflow: hidden;
+}
+body .main_container .image_container img {
+  width: 100%;
+  z-index: 3;
+  margin-top: 20px;
+}
+body .main_container .image_container p.ls_name {
+  position: absolute;
+  z-index: 2;
+  background: -webkit-linear-gradient(54deg, #383838, #c70f2e);
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+}
+body .main_container .image_container p.ls_name span {
+  line-height: 90px;
+}
+body .main_container .image_container p.st_name {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  color: #fff;
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 500;
+}
+body .main_container .image_container .img_shad {
+  position: absolute;
+  background: linear-gradient(rgba(18, 18, 18, 0), rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 0.9), rgb(18, 18, 18), #121212);
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  z-index: 5;
+}
+body .main_container .image_container .plr_main_info {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: rgba(18, 18, 18, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  gap: 10px;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #383838;
+  padding-bottom: 5px;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_header .img_stat {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_header .img_stat span {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 11px;
+  cursor: pointer;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_header .img_stat img {
+  height: 20px;
+  margin: 0;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_header .name_nat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_header .name_nat img {
+  width: 25px;
+  margin: 0;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_header .name_nat span {
+  line-height: 15px;
+  font-size: 15px;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 5px;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_stats .stat_element {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_stats .stat_element span:nth-child(1) {
+  cursor: pointer;
+}
+body .main_container .image_container .plr_main_info .plr_main_info_stats .stat_element span:nth-child(2) {
+  background: #1e1e1e;
+  border-radius: 20px;
+  padding: 2px 10px;
+  color: #b9b8b8;
+}
+body .main_container .data_holder {
+  width: 92%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+body .main_container .data_holder button {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  border: none;
+  outline: none;
+  color: #b9b8b8;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s ease-in-out all;
+}
+body .main_container .data_holder button::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #c70f2e, #121212);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  left: -100%;
+  transition: 0.5s ease-in-out all;
+}
+body .main_container .data_holder button::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #383838;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  right: 0;
+  transition: 0.5s ease-in-out all;
+}
+body .main_container .data_holder button:hover {
+  opacity: 1;
+}
+body .main_container .data_holder button.active {
+  background: none;
+  color: #fff;
+  opacity: 1;
+  pointer-events: none;
+}
+body .main_container .data_holder button.active::before {
+  left: 0;
+}
+body .main_container .data_holder button.active::after {
+  right: -100%;
+}
+body .main_container .data_holder .main_info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+body .main_container .data_holder .main_info .teams {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 60%;
+}
+body .main_container .data_holder .main_info .teams .team {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 20px;
+}
+body .main_container .data_holder .main_info .teams .team .team_header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+body .main_container .data_holder .main_info .teams .team .team_header img {
+  height: 50px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .main_info .teams .team .team_header p {
+  font-weight: 700;
+  font-size: 20px;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 24px;
+}
+body .main_container .data_holder .main_info .teams .team .team_header p span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+body .main_container .data_holder .main_info .teams .team .team_stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main_container .data_holder .main_info .teams .team .team_stats .graph_cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 33.3333333333%;
+  height: 100px;
+}
+body .main_container .data_holder .main_info .teams .team .team_stats .graph_cont p {
+  font-size: 11px;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 11px;
+}
+body .main_container .data_holder .main_info .markt_value {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 20px;
+}
+body .main_container .data_holder .main_info .markt_value .mrkt_value_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 11px;
+}
+body .main_container .data_holder .main_info .markt_value .mrkt_value_header .current_value p,
+body .main_container .data_holder .main_info .markt_value .mrkt_value_header .h_value p {
+  color: #fff;
+  opacity: 0.7;
+  line-height: 11px;
+}
+body .main_container .data_holder .main_info .markt_value .mrkt_value_header .current_value p:nth-child(2) {
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-top: 5px;
+}
+body .main_container .data_holder .main_info .markt_value .mrkt_value_header .h_value p:nth-child(2) {
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-top: 5px;
+}
+body .main_container .data_holder .main_info .markt_value .mrkt_value_graph {
+  height: 115px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+body .main_container .data_holder .data_pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  overflow-y: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  padding: 10px 0;
+  padding-right: 20px;
+  padding-top: 0;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis::-webkit-scrollbar {
+  width: 10px;
+}
+body .main_container .data_holder .data_analysis::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+body .main_container .data_holder .data_analysis::-webkit-scrollbar-thumb {
+  background: #b9b8b8;
+  border-radius: 20px;
+}
+body .main_container .data_holder .data_analysis::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+body .main_container .data_holder .data_analysis .sec_header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+body .main_container .data_holder .data_analysis .sec_header .hdr_name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_header .hdr_name h1 {
+  font-size: 30px;
+  line-height: 37px;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_header .hdr_name p {
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_header img {
+  height: 70px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #383838;
+  border-radius: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos {
+  background: none;
+  border-radius: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_header h1 {
+  display: flex;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_header h1:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_header p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_header p span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  opacity: 0.7;
+  border-radius: 20px;
+  background: #121212;
+  color: #b9b8b8;
+  font-size: 12px;
+  padding: 1px 15px;
+  transition: 0.5s ease-in-out all;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_header p span:first-child {
+  background: #c70f2e;
+  color: #fff;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_header p span:hover {
+  opacity: 1;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos .pos_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rebeccapurple;
+  width: 100%;
+  height: 79%;
+  padding: 10px;
+  background: #121212;
+  border-radius: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pos img {
+  height: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  background: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: #1e1e1e;
+  height: 50%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .go_pa_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #383838;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .go_pa_header h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .go_pa_header .gp_det {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .go_pa_header .gp_det p {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .go_pa_header .gp_det p span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .go_pa_header .gp_det p span:first-child {
+  opacity: 1;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  gap: 10px;
+  height: 80%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .gp_gls_ast_btns {
+  width: calc(25% - 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .gp_gls_ast_btns button {
+  z-index: 99;
+  font-size: 12px;
+  padding: 5px 15px;
+  text-align: start;
+  color: #b9b8b8;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s ease-in-out all;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .gp_gls_ast_btns button:hover {
+  opacity: 1;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .gp_gls_ast_btns button.active {
+  opacity: 1;
+  color: #fff;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .gp_gls_ast_btns .xpt_an {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .gp_gls_ast_btns .xpt_an button {
+  padding: 5px 12px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast #gp_gls_ast_graph {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 75%;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .graph_hint {
+  position: absolute;
+  font-size: 11px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .graph_hint span {
+  opacity: 0.7;
+  font-weight: 500;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .go_pa_main .gp_gls_ast .graph_hint span:last-child {
+  font-size: 15px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: calc(50% - 10px);
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .body_parts {
+  display: flex;
+  flex-direction: column;
+  width: 41%;
+  background: #1e1e1e;
+  padding: 10px 10px 0 10px;
+  gap: 10px;
+  border-radius: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .body_parts p.bp_title {
+  font-size: 16px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .body_parts .bps {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .body_parts .bps .bp {
+  display: flex;
+  gap: 10px;
+  width: calc(50% - 5px);
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .body_parts .bps .bp p {
+  font-size: 12px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .body_parts .bps .bp .bp_fig {
+  width: 50px;
+  height: 50px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .body_parts .bps .bp:last-child {
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+  height: 100%;
+  padding: 10px;
+  background: #1e1e1e;
+  border-radius: 20px;
+  width: calc(59% - 10px);
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+  right: 10px;
+  top: 10px;
+  background: rgba(18, 18, 18, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: -10px 10px 29px 0px rgba(56, 56, 56, 0.77);
+  -webkit-box-shadow: -10px 10px 29px 0px rgba(56, 56, 56, 0.77);
+  -moz-box-shadow: -10px 10px 29px 0px rgba(56, 56, 56, 0.77);
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams .teams_head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #383838;
+  margin-bottom: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams .teams_head span {
+  font-size: 11px;
+  color: #c70f2e;
+  font-weight: 700;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams h3 {
+  font-weight: 300;
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  font-size: 12px;
+  color: #fff;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams h3 span {
+  font-weight: 400;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams h3 .img_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams .img_cont {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis .teams img {
+  height: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis p {
+  font-weight: 700;
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 50%;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.go_pa .gp_body_parts .g_dis #g_dis {
+  height: 130px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc {
+  border-radius: 0;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .sh_sot_plot,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_graph, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .sh_sot_plot,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_graph, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .sh_sot_plot,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_graph {
+  background: #1e1e1e;
+  height: 100%;
+  width: calc(65% - 10px);
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_graph p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .sh_sot_plot p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_graph p, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_graph p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .sh_sot_plot p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_graph p, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_graph p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .sh_sot_plot p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_graph p {
+  display: flex;
+  flex-direction: column;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_graph p span:first-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .sh_sot_plot p span:first-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_graph p span:first-child, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_graph p span:first-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .sh_sot_plot p span:first-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_graph p span:first-child, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_graph p span:first-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .sh_sot_plot p span:first-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_graph p span:first-child {
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_graph p span:last-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .sh_sot_plot p span:last-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_graph p span:last-child, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_graph p span:last-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .sh_sot_plot p span:last-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_graph p span:last-child, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_graph p span:last-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .sh_sot_plot p span:last-child,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_graph p span:last-child {
+  font-size: 12px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_graph #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_graph #pen_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .sh_sot_plot #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .sh_sot_plot #pen_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_graph #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_graph #pen_graph, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_graph #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_graph #pen_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .sh_sot_plot #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .sh_sot_plot #pen_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_graph #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_graph #pen_graph, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_graph #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_graph #pen_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .sh_sot_plot #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .sh_sot_plot #pen_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_graph #sh_sot_graph,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_graph #pen_graph {
+  height: 115px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc {
+  padding: 10px;
+  border-radius: 20px;
+  background: #1e1e1e;
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc p, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc p, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot p,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc p {
+  font-weight: 700;
+  width: 70%;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .pen_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .pen_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .pen_a, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .pen_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .pen_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .pen_a, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .pen_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .pen_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .sh_a,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .pen_a {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .pen_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .pen_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .pen_a span, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .pen_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .pen_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .pen_a span, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .pen_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .pen_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .sh_a span,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .pen_a span {
+  font-size: 12px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .pen_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .shot_acc_sot .pen_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pen_acc_gl_perc .pen_a .pen_g, body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pass_acc_prog .pen_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .shot_acc_sot .pen_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.shot_acc .pen_acc_gl_perc .pen_a .pen_g, body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pass_acc_prog .pen_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .shot_acc_sot .pen_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .sh_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .sh_a .pen_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .pen_a .sh_g,
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pen_acc .pen_acc_gl_perc .pen_a .pen_g {
+  width: 50px;
+  height: 50px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog p {
+  font-size: 20px;
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .pass_a {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .pass_a span {
+  font-size: 14px;
+  width: 60%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.pass_an .pass_acc_prog .pass_a .pass_g {
+  width: 60px;
+  height: 60px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.def_ac {
+  background: #1e1e1e;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.def_ac p {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.def_ac .def_acts {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.def_ac .def_acts .def_act {
+  width: calc(50% - 5px);
+  display: flex;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.def_ac .def_acts .def_act span {
+  font-size: 14px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.def_ac .def_acts .def_act .def_g {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.def_ac .def_acts .def_act:last-child {
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times {
+  background: none;
+  border-radius: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .app_times_g {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+  height: 55%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .app_times_g p {
+  display: flex;
+  flex-direction: column;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .app_times_g p span:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .app_times_g p span:last-child {
+  font-size: 12px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .app_times_g #app_times_g {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  background: #1e1e1e;
+  height: calc(45% - 10px);
+  padding: 10px;
+  border-radius: 20px;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an p {
+  display: flex;
+  flex-direction: column;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an p span:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an p span:last-child {
+  font-size: 12px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an .match_apps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an .match_apps span {
+  font-size: 12px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an .match_apps .match_app {
+  display: flex;
+  gap: 5px;
+  width: calc(50% - 5px);
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an .match_apps .match_app .match_app_g {
+  height: 50px;
+  width: 50px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an .match_apps .match_app:first-child {
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an .match_apps .match_app:first-child span {
+  font-size: 14px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.app_times .matches_an .match_apps .match_app:first-child .match_app_g {
+  height: 60px;
+  width: 60px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.tchs {
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.tchs p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.tchs p span:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.tchs p span:last-child {
+  font-size: 12px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.tchs #tchs_graph {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs {
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 5px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs button {
+  z-index: 99;
+  font-size: 12px;
+  width: 100%;
+  text-align: start;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs p {
+  display: flex;
+  flex-direction: column;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs p span:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs p span:last-child {
+  font-size: 12px;
+  opacity: 0.7;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs .sca_car_tkons_graph {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 80%;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs .sca_car_tkons_graph #sca_car_tkons_graph {
+  height: 100%;
+  width: 80%;
+  overflow: hidden;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_graphs .sca_car_tkons_graph .sca_car_tkons_btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  height: 100%;
+  width: calc(20% - 10px);
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_acc {
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_acc p {
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_acc .sca_car_tks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_acc .sca_car_tks .sca_car_tk {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: calc(50% - 5px);
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_acc .sca_car_tks .sca_car_tk span {
+  font-size: 12px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.sca_car_tkons_acc .sca_car_tks .sca_car_tk .sca_car_tk_graph {
+  width: 50px;
+  height: 50px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.wide {
+  grid-column: span 2;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.tall {
+  grid-row: span 2;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .se_p.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}/*# sourceMappingURL=style.css.map */
