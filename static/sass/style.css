@@ -16,7 +16,7 @@ body {
   overflow: hidden;
   background: #121212;
   color: #fff;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 body .home_container {
   width: 100%;
@@ -180,6 +180,7 @@ body .home_container .img_cont .teams_shirt_number .t img {
   opacity: 0.7;
 }
 body .home_container .img_cont .teams_shirt_number .t p {
+  position: relative;
   width: 100%;
   font-size: 70px;
   background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
@@ -188,6 +189,10 @@ body .home_container .img_cont .teams_shirt_number .t p {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   line-height: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0;
 }
 body .home_container .vids {
   height: 100%;
@@ -205,6 +210,15 @@ body .home_container .vids div {
   border-radius: 20px;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
+  overflow: hidden;
+}
+body .home_container .vids div img,
+body .home_container .vids div video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
 }
 body .home_container .vids div.wide {
   grid-column: span 2;
@@ -226,7 +240,7 @@ body .home_container .info {
 }
 body .main_container {
   height: 100vh;
-  width: 100%;
+  width: 91%;
   overflow: auto;
   display: flex;
   align-items: center;
