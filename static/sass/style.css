@@ -231,12 +231,43 @@ body .home_container .vids div.big {
   grid-row: span 2;
 }
 body .home_container .info {
-  background: rgba(30, 30, 30, 0.5);
+  padding: 10px 0;
+  height: 100%;
+  width: calc(25% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+body .home_container .info .per_chart {
   border-radius: 20px;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  height: 100%;
-  width: calc(25% - 10px);
+  background: rgba(30, 30, 30, 0.5);
+  height: 295px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body .home_container .info .per_chart p {
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .home_container .info .per_chart #per_chart {
+  height: 85%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body .main_container {
   height: 100vh;

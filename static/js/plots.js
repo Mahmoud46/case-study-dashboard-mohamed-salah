@@ -279,3 +279,55 @@ function groupedBarChart(
 
 	Plotly.newPlot(container, data, layout, config);
 }
+
+function spiderChart() {
+	data = [
+		{
+			type: "scatterpolar",
+			r: [92, 89, 70, 92, 89, 80, 85, 45],
+			theta: [
+				"PAC", // Pace
+				"OVR", // Overall
+				"PHY", // Physicality
+				"SPD", // Speed
+				"DRI", // Dribbling
+				"PAS", // Passing
+				"SHO", // Shooting
+				"DEF", // Defense
+			],
+			fill: "toself",
+			fillcolor: {
+				gradient: {
+					type: "linear",
+					color: ["#c70f2e", "#1e1e1e"], // Gradient colors
+					stops: [0, 1], // Start and end points
+				},
+			},
+			line: {
+				color: "#c70f2e", // Line color
+			},
+		},
+	];
+
+	layout = {
+		polar: {
+			radialaxis: {
+				visible: true,
+				range: [0, 100],
+				showticklabels: false, // Hide axis numbers
+			},
+			bgcolor: "rgba(0,0,0,0)", // Transparent inside background
+		},
+		showlegend: false,
+		margin: {
+			l: 20, // left margin
+			r: 20, // right margin
+			t: 20, // top margin
+			b: 20, // bottom margin
+		},
+		paper_bgcolor: "rgba(0,0,0,0)", // Transparent outer background
+	};
+
+	Plotly.newPlot("per_chart", data, layout);
+}
+spiderChart();
