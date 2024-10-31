@@ -306,6 +306,7 @@ function spiderChart() {
 			line: {
 				color: "#c70f2e", // Line color
 			},
+			hovertemplate: `<b>%{theta}:</b> %{r}<extra></extra>`, // Adjust hover template for horizontal layout
 		},
 	];
 
@@ -327,7 +328,12 @@ function spiderChart() {
 		},
 		paper_bgcolor: "rgba(0,0,0,0)", // Transparent outer background
 	};
+	// Disable plotly toolbar
+	var config = {
+		displayModeBar: false, // Disable the toolbar/menu
+	};
 
-	Plotly.newPlot("per_chart", data, layout);
+	Plotly.newPlot("per_chart", data, layout, config);
 }
+
 spiderChart();
