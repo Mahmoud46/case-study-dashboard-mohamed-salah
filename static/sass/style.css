@@ -280,8 +280,9 @@ body .home_container .info .main_info {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 10px;
 }
 body .home_container .info .main_info .info_head {
   display: flex;
@@ -333,6 +334,11 @@ body .home_container .info .main_info .info_head .plr_name span:last-child {
   line-height: 25px;
   letter-spacing: 5px;
   font-weight: 700;
+}
+body .home_container .info .main_info .sum_data {
+  background: rebeccapurple;
+  height: 84%;
+  width: 100%;
 }
 body .main_container {
   height: 100vh;

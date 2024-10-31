@@ -347,4 +347,52 @@ function spiderChart() {
 	Plotly.newPlot("per_chart", data, layout, config);
 }
 
+function progressBar() {
+	const data = [
+		{
+			type: "bar",
+			x: [75], // Progress value (e.g., 75 for 75%)
+			y: ["Progress"],
+			orientation: "h", // Horizontal bar
+			marker: {
+				color: "#c70f2e", // Progress color
+			},
+			hoverinfo: "none", // Hide hover text for a clean look
+		},
+		{
+			type: "bar",
+			x: [25], // Remaining part (100 - progress)
+			y: ["Progress"],
+			orientation: "h",
+			marker: {
+				color: "#383838", // Uncompleted color
+			},
+			hoverinfo: "none",
+		},
+	];
+
+	const layout = {
+		barmode: "stack", // Stack bars to create a single progress bar effect
+		xaxis: {
+			range: [0, 100], // Percentage scale
+			showticklabels: false, // Hide x-axis labels
+			fixedrange: true, // Disable zoom
+		},
+		yaxis: {
+			showticklabels: false, // Hide y-axis labels
+		},
+		height: 10, // Smaller height for compact progress bar
+		width: 200, // Adjust width for a compact design
+		margin: { t: 0, b: 0, l: 0, r: 0 },
+		paper_bgcolor: "rgba(0,0,0,0)", // Transparent paper background
+		plot_bgcolor: "rgba(0,0,0,0)", // Transparent plot area background
+		showlegend: false,
+	};
+
+	let config = {
+		displayModeBar: false, // Disable the toolbar/menu
+	};
+	Plotly.newPlot("prg", data, layout, config);
+}
 spiderChart();
+progressBar();
