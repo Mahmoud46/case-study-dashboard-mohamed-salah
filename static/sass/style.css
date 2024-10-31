@@ -238,6 +238,7 @@ body .home_container .info {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  gap: 10px;
 }
 body .home_container .info .per_chart {
   border-radius: 20px;
@@ -269,6 +270,70 @@ body .home_container .info .per_chart #per_chart {
   justify-content: center;
   align-items: center;
 }
+body .home_container .info .main_info {
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background: rgba(30, 30, 30, 0.5);
+  height: calc(100% - 295px - 10px);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body .home_container .info .main_info .info_head {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+body .home_container .info .main_info .info_head img {
+  width: 30px;
+}
+body .home_container .info .main_info .info_head .pos_foot,
+body .home_container .info .main_info .info_head .plr_name,
+body .home_container .info .main_info .info_head .nat_age {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .home_container .info .main_info .info_head .pos_foot span,
+body .home_container .info .main_info .info_head .plr_name span,
+body .home_container .info .main_info .info_head .nat_age span {
+  line-height: 14px;
+  gap: 2px;
+}
+body .home_container .info .main_info .info_head .nat_age {
+  gap: 5px;
+}
+body .home_container .info .main_info .info_head .nat_age span {
+  font-size: 25px;
+  line-height: 19px;
+}
+body .home_container .info .main_info .info_head .pos_foot {
+  gap: 5px;
+}
+body .home_container .info .main_info .info_head .pos_foot span {
+  font-size: 18px;
+}
+body .home_container .info .main_info .info_head .plr_name {
+  width: 75%;
+  align-items: flex-start;
+  gap: 5px;
+  border-left: 2px solid #383838;
+  padding-left: 5px;
+}
+body .home_container .info .main_info .info_head .plr_name span {
+  line-height: 14px;
+  font-size: 20px;
+}
+body .home_container .info .main_info .info_head .plr_name span:last-child {
+  font-size: 35px;
+  line-height: 25px;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
 body .main_container {
   height: 100vh;
   width: 91%;
@@ -277,7 +342,7 @@ body .main_container {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 body .main_container .image_container {
   position: relative;

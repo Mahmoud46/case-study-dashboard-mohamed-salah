@@ -281,14 +281,14 @@ function groupedBarChart(
 }
 
 function spiderChart() {
-	data = [
+	let data = [
 		{
 			type: "scatterpolar",
-			r: [92, 89, 70, 92, 89, 80, 85, 45],
+			r: [92, 70, 89, 92, 89, 80, 85, 45],
 			theta: [
 				"PAC", // Pace
-				"OVR", // Overall
 				"PHY", // Physicality
+				"OVR", // Overall
 				"SPD", // Speed
 				"DRI", // Dribbling
 				"PAS", // Passing
@@ -302,15 +302,25 @@ function spiderChart() {
 					color: ["#c70f2e", "#1e1e1e"], // Gradient colors
 					stops: [0, 1], // Start and end points
 				},
-			},
+			}, // Single color for the fill
 			line: {
 				color: "#c70f2e", // Line color
 			},
-			hovertemplate: `<b>%{theta}:</b> %{r}<extra></extra>`, // Adjust hover template for horizontal layout
+			hovertemplate: `<b>%{customdata}:</b> %{r}<extra></extra>`, // Use customdata for hover text
+			customdata: [
+				"Pace",
+				"Physicality",
+				"Overall",
+				"Speed",
+				"Dribbling",
+				"Passing",
+				"Shooting",
+				"Defense",
+			],
 		},
 	];
 
-	layout = {
+	let layout = {
 		polar: {
 			radialaxis: {
 				visible: true,
@@ -321,15 +331,16 @@ function spiderChart() {
 		},
 		showlegend: false,
 		margin: {
-			l: 20, // left margin
-			r: 20, // right margin
-			t: 20, // top margin
-			b: 20, // bottom margin
+			l: 20,
+			r: 20,
+			t: 20,
+			b: 20,
 		},
 		paper_bgcolor: "rgba(0,0,0,0)", // Transparent outer background
 	};
+
 	// Disable plotly toolbar
-	var config = {
+	let config = {
 		displayModeBar: false, // Disable the toolbar/menu
 	};
 
