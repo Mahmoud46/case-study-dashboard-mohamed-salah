@@ -347,11 +347,11 @@ function spiderChart() {
 	Plotly.newPlot("per_chart", data, layout, config);
 }
 
-function progressBar() {
+function progressBar(per, container) {
 	const data = [
 		{
 			type: "bar",
-			x: [75], // Progress value (e.g., 75 for 75%)
+			x: [per], // Progress value
 			y: ["Progress"],
 			orientation: "h", // Horizontal bar
 			marker: {
@@ -361,7 +361,7 @@ function progressBar() {
 		},
 		{
 			type: "bar",
-			x: [25], // Remaining part (100 - progress)
+			x: [100 - per], // Remaining part (100 - progress)
 			y: ["Progress"],
 			orientation: "h",
 			marker: {
@@ -373,6 +373,7 @@ function progressBar() {
 
 	const layout = {
 		barmode: "stack", // Stack bars to create a single progress bar effect
+		bargap: 0, // Remove the gap between bars
 		xaxis: {
 			range: [0, 100], // Percentage scale
 			showticklabels: false, // Hide x-axis labels
@@ -381,18 +382,40 @@ function progressBar() {
 		yaxis: {
 			showticklabels: false, // Hide y-axis labels
 		},
+		annotations: [
+			{
+				x: per / 2, // Position text at the center of the progress bar
+				y: 0, // Center vertically within the bar
+				text: `${per}%`, // Display progress percentage
+				showarrow: false, // No arrow needed
+				font: {
+					color: "rgba(255,255,255,0.5)", // Text color
+					size: 12,
+				},
+				xanchor: "center",
+				yanchor: "middle",
+			},
+		],
 		height: 10, // Smaller height for compact progress bar
-		width: 200, // Adjust width for a compact design
+		width: 250, // Adjust width for a compact design
 		margin: { t: 0, b: 0, l: 0, r: 0 },
 		paper_bgcolor: "rgba(0,0,0,0)", // Transparent paper background
 		plot_bgcolor: "rgba(0,0,0,0)", // Transparent plot area background
 		showlegend: false,
 	};
 
-	let config = {
+	const config = {
+		staticPlot: true, // Disable all interactions, including cursor
 		displayModeBar: false, // Disable the toolbar/menu
 	};
-	Plotly.newPlot("prg", data, layout, config);
+
+	Plotly.newPlot(container, data, layout, config);
 }
 spiderChart();
-progressBar();
+progressBar(75, "app_per_count");
+progressBar(36, "gp_count_per");
+progressBar(14.3, "xg_count_per");
+progressBar(14.3, "npxg_count_per");
+progressBar(14.3, "xag_count_per");
+progressBar(14.3, "sca_count_per");
+progressBar(14.3, "gca_count_per");
