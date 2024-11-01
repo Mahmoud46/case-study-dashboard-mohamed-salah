@@ -27,7 +27,10 @@ body {
 		justify-content: space-between;
 		align-items: flex-start;
 		// background: rebeccapurple;
-		overflow: hidden;
+		// overflow: hidden;
+		overflow-y: hidden;
+		overflow-y: visible;
+
 		gap: 10px;
 		.img_cont {
 			width: 500px;
@@ -224,6 +227,7 @@ body {
 			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 			grid-auto-rows: 100px;
 			grid-auto-flow: dense;
+			overflow-y: hidden;
 			padding: 10px 0;
 			div {
 				background: rgba($color: #1e1e1e, $alpha: 0.5);
@@ -261,6 +265,7 @@ body {
 			align-items: center;
 			justify-content: flex-start;
 			gap: 10px;
+			// overflow: hidden;
 			.per_chart {
 				border-radius: 20px;
 				backdrop-filter: blur(15px);
@@ -302,6 +307,7 @@ body {
 				justify-content: flex-start;
 				align-items: flex-start;
 				gap: 10px;
+
 				.info_head {
 					display: flex;
 					width: 100%;
@@ -511,9 +517,10 @@ body {
 						flex-direction: column;
 						gap: 20px;
 						width: 50%;
-						background: #1e1e1e;
+						background: rgba($color: #1e1e1e, $alpha: 0.5);
 						padding: 10px;
 						border-radius: 20px;
+						backdrop-filter: blur(15px);
 						.team_header {
 							display: flex;
 							align-items: flex-start;
@@ -568,7 +575,8 @@ body {
 					flex-direction: column;
 					gap: 10px;
 					width: 40%;
-					background: #1e1e1e;
+					background: rgba($color: #1e1e1e, $alpha: 0.5);
+					backdrop-filter: blur(15px);
 					padding: 10px;
 					border-radius: 20px;
 					.mrkt_value_header {
@@ -1025,10 +1033,9 @@ body {
 										backdrop-filter: blur(15px);
 										padding: 10px;
 										border-radius: 20px;
-										box-shadow: -10px 10px 29px 0px rgba(56, 56, 56, 0.77);
-										-webkit-box-shadow: -10px 10px 29px 0px
-											rgba(56, 56, 56, 0.77);
-										-moz-box-shadow: -10px 10px 29px 0px rgba(56, 56, 56, 0.77);
+										box-shadow: 1px 15px 26px 4px rgba(56, 56, 56, 0.75);
+										-webkit-box-shadow: 1px 15px 26px 4px rgba(56, 56, 56, 0.75);
+										-moz-box-shadow: 1px 15px 26px 4px rgba(56, 56, 56, 0.75);
 										.teams_head {
 											width: 100%;
 											display: flex;
