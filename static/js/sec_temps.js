@@ -609,3 +609,118 @@ function getEgyptAnalysisTemplate() {
 					</div>
 	`;
 }
+
+function getCompetitionsTemplate() {
+	return `<div class="sec_analysis">
+						<div class="comp_div prlg big">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/premier_league.png" alt="" />
+								<div class="comp_title">
+									<p>Premier League</p>
+									<p>England</p>
+								</div>
+							</div>
+							<div class="comp_body"></div>
+						</div>
+						<div class="comp_div wc">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/wc2018.png" alt="" />
+								<div class="comp_title">
+									<p>FIFA World Cup</p>
+									<p>Russia 2018</p>
+								</div>
+							</div>
+							<div class="sum_info">
+								<div class="s_info">
+									<div id="wc_gp" class="s_graph"></div>
+									<p>Goal Participation</p>
+								</div>
+								<div class="s_info">
+									<div id="wc_st" class="s_graph"></div>
+									<p>Starting eleven</p>
+								</div>
+								<div class="s_info">
+									<div id="wc_min" class="s_graph"></div>
+									<p>Minutes</p>
+								</div>
+							</div>
+						</div>
+						<div class="comp_div elg">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/europa_league.png" alt="" />
+								<div class="comp_title">
+									<p>UEFA Europa League</p>
+									<p>UEFA</p>
+								</div>
+							</div>
+							<div class="sum_info">
+								<div class="s_info">
+									<div id="el_gp" class="s_graph"></div>
+									<p>Goal Participation</p>
+								</div>
+								<div class="s_info">
+									<div id="el_st" class="s_graph"></div>
+									<p>Starting eleven</p>
+								</div>
+								<div class="s_info">
+									<div id="el_min" class="s_graph"></div>
+									<p>Minutes</p>
+								</div>
+							</div>
+						</div>
+						<div class="comp_div afcon">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/afcon.png" alt="" />
+								<div class="comp_title">
+									<p>Africa Cup of Nations</p>
+									<p>CAF</p>
+								</div>
+							</div>
+						</div>
+						<div class="comp_div clg big">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/champions_league.png" alt="" />
+								<div class="comp_title">
+									<p>UEFA Champions League</p>
+									<p>UEFA</p>
+								</div>
+							</div>
+						</div>
+						<div class="comp_div afconq">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/caf.png" alt="" />
+								<div class="comp_title">
+									<p>AFCON qualification</p>
+									<p>CAF</p>
+								</div>
+							</div>
+						</div>
+						<div class="comp_div fa">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/fa_cup.png" alt="" />
+								<div class="comp_title">
+									<p>FA Cup</p>
+									<p>England</p>
+								</div>
+							</div>
+						</div>
+						<div class="comp_div wcq wide">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/caf.png" alt="" />
+								<div class="comp_title">
+									<p>World Cup Qualification</p>
+									<p>FIFA</p>
+								</div>
+							</div>
+						</div>
+						<div class="comp_div efl">
+							<div class="comp_header">
+								<img src="./static/imgs/logos/carabao_cup.png" alt="" />
+								<div class="comp_title">
+									<p>EFL Cup</p>
+									<p>England</p>
+								</div>
+							</div>
+						</div>
+					</div>`;
+}

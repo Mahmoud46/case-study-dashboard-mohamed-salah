@@ -46,8 +46,8 @@ lineChartWithUnderCurveArea(
 	"mrkt_value_graph"
 );
 
-data_analysis_container.innerHTML = getLiverpoolAnalysisTemplate();
-showLiverpoolAnalysis();
+// data_analysis_container.innerHTML = getLiverpoolAnalysisTemplate();
+// showLiverpoolAnalysis();
 
 document.querySelectorAll(".main_container .data_pages button").forEach((btn) =>
 	btn.addEventListener("click", (_) => {
@@ -70,11 +70,21 @@ function showAnalysis(analysis_cat) {
 	if (analysis_cat == "liverpool") {
 		data_analysis_container.innerHTML = getLiverpoolAnalysisTemplate();
 		showLiverpoolAnalysis();
+	} else if (analysis_cat == "comp") {
+		data_analysis_container.innerHTML = getCompetitionsTemplate();
 	} else {
 		data_analysis_container.innerHTML = getEgyptAnalysisTemplate();
 		showEgyptAnalysis();
 	}
 }
+
+// comp
+addDonutChartCircularBar(100, 70, 70, "wc_gp");
+addDonutChartCircularBar(100, 70, 70, "wc_st");
+addDonutChartCircularBar(67, 70, 70, "wc_min");
+addDonutChartCircularBar(31, 70, 70, "el_gp");
+addDonutChartCircularBar(44, 70, 70, "el_st");
+addDonutChartCircularBar(44, 70, 70, "el_min");
 
 function showLiverpoolAnalysis() {
 	let gp = {
@@ -192,7 +202,7 @@ function showLiverpoolAnalysis() {
 		gp.liv.s,
 		gp.liv.gp,
 		100,
-		549,
+		560,
 		"gp_gls_ast_graph",
 		"Season",
 		"Goal participation",
@@ -203,7 +213,7 @@ function showLiverpoolAnalysis() {
 		gp.liv.s,
 		[52, 52, 46, 51, 51, 51, 44],
 		140,
-		380,
+		385,
 		"app_times_g",
 		"Season",
 		"Total matches",
@@ -214,7 +224,7 @@ function showLiverpoolAnalysis() {
 		gp.liv.s,
 		[1986, 2185, 1953, 2218, 2279, 2143, 1722],
 		110,
-		378,
+		385,
 		"tchs_graph",
 		"Season",
 		"Touches total",
@@ -309,7 +319,7 @@ function showLiverpoolAnalysis() {
 					gp.liv.s,
 					gp.liv[`${btc[0]}`],
 					100,
-					549,
+					560,
 					"gp_gls_ast_graph",
 					"Season",
 					btn.innerText,
@@ -452,7 +462,7 @@ function showEgyptAnalysis() {
 		gp.liv.s,
 		gp.liv.gp,
 		100,
-		549,
+		560,
 		"gp_gls_ast_graph",
 		"Season",
 		"Goal participation",
@@ -463,7 +473,7 @@ function showEgyptAnalysis() {
 		gp.liv.s,
 		[6, 7, 1, 2, 15, 5, 9],
 		140,
-		380,
+		385,
 		"app_times_g",
 		"Season",
 		"Total matches",
@@ -474,7 +484,7 @@ function showEgyptAnalysis() {
 		gp.liv.s,
 		[216, 294, 42, 87, 671, 210, 352],
 		110,
-		378,
+		385,
 		"tchs_graph",
 		"Season",
 		"Touches total",
@@ -569,7 +579,7 @@ function showEgyptAnalysis() {
 					gp.liv.s,
 					gp.liv[`${btc[0]}`],
 					100,
-					549,
+					560,
 					"gp_gls_ast_graph",
 					"Season",
 					btn.innerText,

@@ -1489,4 +1489,81 @@ body .main_container .data_holder .data_analysis .sec_analysis .se_p.tall {
 body .main_container .data_holder .data_analysis .sec_analysis .se_p.big {
   grid-column: span 2;
   grid-row: span 2;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div {
+  background: #1e1e1e;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .comp_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .comp_header img {
+  height: 50px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .comp_header .comp_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .comp_header .comp_title p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(54deg, #c70f2e, #383838);
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .comp_header .comp_title p:last-child {
+  font-size: 12px;
+  color: #b9b8b8;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .sum_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .sum_info .s_info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: calc(33.3333333333% - 5px);
+  height: 112px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .sum_info .s_info p {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 13px;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div .sum_info .s_info .s_graph {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div.wide {
+  grid-column: span 2;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div.tall {
+  grid-row: span 2;
+}
+body .main_container .data_holder .data_analysis .sec_analysis .comp_div.big {
+  grid-column: span 2;
+  grid-row: span 2;
 }/*# sourceMappingURL=style.css.map */
