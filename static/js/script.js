@@ -46,8 +46,8 @@ lineChartWithUnderCurveArea(
 	"mrkt_value_graph"
 );
 
-// data_analysis_container.innerHTML = getLiverpoolAnalysisTemplate();
-// showLiverpoolAnalysis();
+data_analysis_container.innerHTML = getLiverpoolAnalysisTemplate();
+showLiverpoolAnalysis();
 
 document.querySelectorAll(".main_container .data_pages button").forEach((btn) =>
 	btn.addEventListener("click", (_) => {
@@ -72,19 +72,12 @@ function showAnalysis(analysis_cat) {
 		showLiverpoolAnalysis();
 	} else if (analysis_cat == "comp") {
 		data_analysis_container.innerHTML = getCompetitionsTemplate();
+		showComptAnalysis();
 	} else {
 		data_analysis_container.innerHTML = getEgyptAnalysisTemplate();
 		showEgyptAnalysis();
 	}
 }
-
-// comp
-addDonutChartCircularBar(100, 70, 70, "wc_gp");
-addDonutChartCircularBar(100, 70, 70, "wc_st");
-addDonutChartCircularBar(67, 70, 70, "wc_min");
-addDonutChartCircularBar(31, 70, 70, "el_gp");
-addDonutChartCircularBar(44, 70, 70, "el_st");
-addDonutChartCircularBar(44, 70, 70, "el_min");
 
 function showLiverpoolAnalysis() {
 	let gp = {
@@ -664,4 +657,13 @@ function fetchDataFromJSON() {
 			// Handle errors
 			console.error("There was a problem with the fetch operation:", error);
 		});
+}
+
+function showComptAnalysis() {
+	addDonutChartCircularBar(100, 70, 70, "wc_gp");
+	addDonutChartCircularBar(100, 70, 70, "wc_st");
+	addDonutChartCircularBar(67, 70, 70, "wc_min");
+	addDonutChartCircularBar(31, 70, 70, "el_gp");
+	addDonutChartCircularBar(44, 70, 70, "el_st");
+	addDonutChartCircularBar(44, 70, 70, "el_min");
 }
